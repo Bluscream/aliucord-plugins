@@ -21,7 +21,7 @@ subprojects {
         compileSdk = 34
 
         defaultConfig {
-            minSdk = 24
+            minSdk = 21
         }
 
         buildFeatures {
@@ -36,6 +36,10 @@ subprojects {
         compileOptions {
             sourceCompatibility = JavaVersion.VERSION_11
             targetCompatibility = JavaVersion.VERSION_11
+        }
+
+        lint {
+            disable += "SetTextI18n"
         }
     }
 
